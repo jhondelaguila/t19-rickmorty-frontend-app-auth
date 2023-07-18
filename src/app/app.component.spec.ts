@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 't19-rickmorty-frontend-app-auth'`, () => {
+  it(`should have as title 't15-rickmorty-frontend-app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('t19-rickmorty-frontend-app-auth');
+    expect(app.title).toEqual('t15-rickmorty-frontend-app');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('t19-rickmorty-frontend-app-auth app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('t15-rickmorty-frontend-app app is running!');
   });
 });

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "jjdap-ang-firebase-auth": {
+      "hosting": {
+        "t19-rickmorty-frontend-app-auth": [
+          "jjdap-ang-firebase-auth"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "jjdap-ang-firebase-auth"
+  }
+}

@@ -1,0 +1,10 @@
+<app-base></app-base>
+<div class="center-elem">
+  <h1>{{ character[0].name | uppercase }}</h1>
+  <p>Status: {{ character[0].status }}</p>
+  <p>Species: {{ character[0].species }}</p>
+  <p>Gender: {{ character[0].gender }}</p>
+  <p>Origin: {{ character[0].origin.name }}</p>
+  <p>Location: {{ character[0].location.name }}</p>
+  <img src="{{ character[0].image }}" alt="" />
+</div>

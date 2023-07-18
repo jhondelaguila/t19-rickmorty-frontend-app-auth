@@ -1,0 +1,82 @@
+<app-base></app-base>
+<div class="row">
+  <div class="col center-elem">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label"
+        >Name</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="name"
+      />
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Status</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="status"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Specie</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="specie"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Type</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="type"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Gender</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="gender"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Origin</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="origin"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Location</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="location"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Image</label
+        >
+        <input type="file" class="form-control" aria-label="file example" [(ngModel)]="image">
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="create()">Create</button>
+  </div>
+</div>

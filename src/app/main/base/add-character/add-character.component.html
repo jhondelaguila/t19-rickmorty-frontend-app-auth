@@ -1,0 +1,56 @@
+<app-base></app-base>
+<div class="row">
+  <div class="col center-elem" *ngFor="let character of characterPage">
+    <div
+      class="card card-settings"
+      style="width: 18rem"
+      *ngIf="character !== undefined"
+    >
+      <img src="{{ character.image }}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ character.name }}</h5>
+      </div>
+      <div class="card-body center-elem">
+        <a type="button" class="btn btn-success" (click)="add(character.id)"
+          >Add character</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row center-elem">
+  <div
+    class="btn-group btn-group-sm btn-1"
+    role="group"
+    aria-label="Small button group"
+  >
+    <a
+      *ngIf="actualPage > 0; else prevPage"
+      type="button"
+      class="btn btn-outline-primary"
+      (click)="previousPage()"
+      >prev</a
+    >
+    <ng-template #prevPage
+      ><button type="button" class="btn btn-outline-primary" disabled>
+        prev
+      </button></ng-template
+    >
+    <button type="button" class="btn btn-outline-primary" disabled>
+      {{ actualPage + 1 }} of {{totalPages+1}}
+    </button>
+    <a
+      *ngIf="actualPage !== totalPages; else nextPag"
+      type="button"
+      class="btn btn-outline-primary"
+      (click)="nextPage()"
+      >next</a
+    >
+    <ng-template #nextPag
+      ><button type="button" class="btn btn-outline-primary" disabled>
+        next
+      </button></ng-template
+    >
+  </div>
+</div>
+<app-character *ngIf="false" [totalCharsAdded]="totalChars"></app-character>

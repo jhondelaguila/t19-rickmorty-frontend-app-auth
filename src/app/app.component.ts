@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 't19-rickmorty-frontend-app-auth';
+  title = 't15-rickmorty-frontend-app';
 }

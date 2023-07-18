@@ -1,0 +1,25 @@
+<app-base></app-base>
+<app-character [page]="actualPage" [totalCharsAdded]="totalChars"></app-character>
+<div class="row center-elem">
+    <div
+      class="btn-group btn-group-sm btn-1"
+      role="group"
+      aria-label="Small button group"
+    >
+      <a *ngIf="actualPage > 0; else prevPage" type="button" class="btn btn-outline-primary" (click)="previousPage()">prev</a>
+      <ng-template #prevPage><button type="button" class="btn btn-outline-primary" disabled>prev</button></ng-template>
+      <button type="button" class="btn btn-outline-primary" disabled>{{actualPage+1}} of {{totalPages+1}}</button>
+      <a *ngIf="actualPage !== totalPages; else nextPag" type="button" class="btn btn-outline-primary" (click)="nextPage()">next</a>
+      <ng-template #nextPag><button type="button" class="btn btn-outline-primary" disabled>next</button></ng-template>
+
+    </div>
+    <!-- <div
+      class="btn-group btn-group-sm btn-1"
+      role="group"
+      aria-label="Small button group"
+    >
+      <a type="button" class="btn btn-outline-primary" (click)="goToFirstPage()">first page</a>
+      <a type="button" class="btn btn-outline-primary" (click)="goToMiddlePage()">page 21</a>
+      <a type="button" class="btn btn-outline-primary" (click)="goToLastPage()">last page</a>
+    </div> -->
+  </div>
